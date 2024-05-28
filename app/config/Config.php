@@ -82,9 +82,17 @@ class Config
         $ruta_completa = self::SERVER . '/' . $ruta;
         return $ruta_completa;
     }
-    static function dep($archivo)
+    static function depJs($archivo)
     {
         return self::DEP_JS . $archivo;
+    }
+    static function depCss($archivo)
+    {
+        return self::DEP_CSS . $archivo;
+    }
+    static function depImg($archivo)
+    {
+        return self::DEP_IMG . $archivo;
     }
     public function redirigir($ruta)
     {
