@@ -34,12 +34,12 @@ Coquita combina los mejores paquetes en el ecosistema PHP para ofrecer el framew
 
 Para utilizar "coquita", asegúrate de tener el siguiente entorno:
 
-- **PHP** 7.4 o superior
+- **PHP** 8.2 o superior
 - **Composer** para la gestión de dependencias
-- **Node.js 21.7.3** y **npm** para manejar paquetes de frontend
+- **Node.js 21 o superior** y **npm** para manejar paquetes de frontend
 - Un servidor **web** como **Apache**
 - Un **host-Virtual**
-- **MySQL**
+- **MySQL** o **MariaDb**
 
 
 ## Configuración recomendada
@@ -54,13 +54,14 @@ Sigue estos pasos para instalar "coquita":
     https://github.com/JuanDlc10/Framework-Coquita.git
     cd coquita
     ```
-
-2. Instala las dependencias de PHP usando Composer:
+2. Configura tu servidor web para apuntar al directorio `raiz` del proyecto.
+ 
+3. Instala las dependencias de PHP usando Composer:
     ```sh
     composer install
     ```
 
-3. Configura tu archivo de entorno `.env`:
+4. Configura tu archivo de entorno `.env`:
    
     Edita el archivo `.env` con las credenciales de tu base de datos y otras configuraciones necesarias.
    ```sh
@@ -70,12 +71,17 @@ Sigue estos pasos para instalar "coquita":
    -PASSWORD = ""
    -DB = "example"
    ```
+5. Configura el archivo `Config`:
+   ```sh
+    -private const SERVER = "http://url-host-virtual";
+    -private const DEP_IMG = self::SERVER . "/public/img/";
+    -private const DEP_JS = self::SERVER . "/public/js/";
+    -private const DEP_CSS = self::SERVER . "/public/css/";
+   ```
 6. Instala las dependencias de frontend:
     ```sh
     npm install
     ```
-
-7. Configura tu servidor web para apuntar al directorio `raiz` del proyecto.
 
 
 ¡Y listo! Ahora puedes acceder a tu aplicación en tu navegador web.
@@ -155,6 +161,8 @@ node coquita view NombreCarpeta NombreVista
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
-## Autor
+## Autores
 
-Autor: Juan Alberto De la cruz Cruz - JuanDlc10
+Autores: 
+-Juan Alberto De la cruz Cruz - JuanDlc10 
+-Diego Bollas Paredes
