@@ -6,7 +6,7 @@ use controller\Login;
 
 class Config
 {
-    private const SERVER = "http://proyecto.local";
+    private const SERVER = "http://url-host-virtual";
     private const DEP_IMG = self::SERVER . "/public/img/";
     private const DEP_JS = self::SERVER . "/public/js/";
     private const DEP_CSS = self::SERVER . "/public/css/";
