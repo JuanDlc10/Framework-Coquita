@@ -178,5 +178,3 @@ class ORM
     }
 }
 
-/* Crear 3 tablas mas, crear 3 controladores mas, y 3 modelos mas TEREA */
-/* Agrega COUNT */
